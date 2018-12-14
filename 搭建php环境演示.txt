@@ -1,0 +1,9 @@
+phpstudy官网:http://phpstudy.php.cn
+环境包下载地址:http://phpstudy.php.cn/phpstudy/PhpStudy20180211.zip
+安装下一步下一步
+桌面上面会生成一个phpStudy图标
+双击打开 点击启动
+其他选项菜单->网址根目录 点击打开
+把几个文件复制进去
+http://localhost/index.html 访问即可
+QQ交流群:925487043

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="layui/layui/css/layui.css">
+</head>
+<body style="padding: 15px;">
+    <button class="layui-btn">选择用户</button>
+    <div id="user_list" data-id=""></div>
+</body>
+<script src="layui/layui/layui.js"></script>
+<script>
+    layui.use('layer',function () {
+        var $ = layui.$;
+         //刚进来清空缓存 预防存在原来缓存 
+         //如果是编辑进来的给value和data-id赋值就可以了
+        layui.data('tabData',{key:'id',value:[]});
+        $('button').on('click',function () {
+            layer.open({
+                type: 2,
+                title: '选择用户',
+                area: ['90%', '90%'],
+                content: 'user.html',
+                end: function () {
+                    var sumit = layui.data('tabData').sumit;
+                    if(sumit==0){
+                        //用户点了保存按钮
+                        //读取缓存
+                        var id = layui.data('tabData').id;
+                        $('#user_list').text(JSON.stringify(id))
+                        $('#user_list').data('id',JSON.stringify(id))
+                    }else{
+                        //用户没有保存关闭窗口
+                        var id = $('#user_list').data('id')
+                        if(id===''){
+                            layui.data('tabData',{key:'id',value:[]});
+                        }else{
+                            layui.data('tabData',{key:'id',value:JSON.parse(id)});
+                        }
+
+                    }
+                }
+            });
+        })
+    })
+</script>
+</html>
