@@ -1,5 +1,9 @@
 # layui-transfer-ajax版本
+
+[非异步版本]: https://github.com/9499574/layui-transfer
+
 ***
+
 ![2018-12-15.01.44.37-GIF.gif](https://raw.githubusercontent.com/9499574/markdown/master/img/2018-12-15.01.44.37-GIF.gif)
 ```
 思路: 左表进来异步请求数据 选择数据后 点击按钮 获取到已选的数据 存储浏览器缓存中
