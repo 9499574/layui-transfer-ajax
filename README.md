@@ -1,6 +1,6 @@
 # layui-transfer-ajax版本
 
-[非异步版本]: https://github.com/9499574/layui-transfer
+[非异步版本](https://github.com/9499574/layui-transfer)
 
 ***
 
