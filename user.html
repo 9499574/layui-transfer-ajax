@@ -112,7 +112,7 @@
         //左按钮点击移动数据
         $('.left-btn').on('click',function(){
             if(!$(this).hasClass('layui-btn-disabled')){
-                $(this).addClass('layui-btn-disabled')
+                $('.left-btn,.right-btn').addClass('layui-btn-disabled')
                 var data = getTableData('left_table_id');
                 //查询缓存是否存在数据
                 var id = layui.data('tabData').id;
@@ -127,7 +127,7 @@
         //右按钮点击移动数据
         $('.right-btn').on('click',function () {
             if(!$(this).hasClass('layui-btn-disabled')){
-                $(this).addClass('layui-btn-disabled')
+                $('.left-btn,.right-btn').addClass('layui-btn-disabled')
                 var data = getTableData('right_table_id');
                 //查询缓存存在的数据
                 var id = layui.data('tabData').id;
